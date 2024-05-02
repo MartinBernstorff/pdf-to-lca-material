@@ -45,7 +45,7 @@ def __(mo):
 
 @app.cell
 def __(file):
-    from pdf_to_text import pdf_to_text
+    from src.lca_vibeke.pdf_to_text import pdf_to_text
     from io import BytesIO
 
     # Get the first page
@@ -82,7 +82,7 @@ def __(interval, text_content):
 
 @app.cell
 def __(api_key, trimmed_text_content):
-    from rows_from_str import get_completion
+    from src.lca_vibeke.rows_from_json import get_completion
 
     rows = get_completion(
         api_key=api_key.value,
@@ -95,7 +95,7 @@ def __(api_key, trimmed_text_content):
 
 @app.cell
 def __(rows):
-    from rows_from_str import json_to_dict
+    from src.lca_vibeke.rows_from_json import json_to_dict
 
     df_rows = json_to_dict(rows)
     return df_rows, json_to_dict

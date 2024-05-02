@@ -1,6 +1,0 @@
-marimo
-openai
-PyPDF2
-polars
-instructor
-joblib
