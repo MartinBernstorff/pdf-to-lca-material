@@ -14,7 +14,7 @@ def __():
 @app.cell
 def __(mo):
     mo.md(
-        rf"""To get started, enter your OpenAI API key.
+        r"""To get started, enter your OpenAI API key.
 
     You can generate one [here](https://platform.openai.com/api-keys)."""
     )
@@ -32,7 +32,7 @@ def __(mo):
 
 @app.cell
 def __(mo):
-    mo.md(rf"Then, upload the file you would like to process.")
+    mo.md(r"Then, upload the file you would like to process.")
     return
 
 
@@ -45,8 +45,9 @@ def __(mo):
 
 @app.cell
 def __(file):
-    from src.lca_vibeke.pdf_to_text import pdf_to_text
     from io import BytesIO
+
+    from src.lca_vibeke.pdf_to_text import pdf_to_text
 
     # Get the first page
     text_content = pdf_to_text(BytesIO(file.contents()))

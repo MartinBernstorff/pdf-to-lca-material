@@ -1,10 +1,8 @@
 [project]
-name = "lca-vibeke"
+name = "pdf-to-lca-materials"
 version = "0.1.0"
 description = "Add your description here"
-authors = [
-    { name = "Martin Bernstorff", email = "martinbernstorff@gmail.com" }
-]
+authors = [{ name = "Martin Bernstorff", email = "martinbernstorff@gmail.com" }]
 dependencies = [
     "instructor>=1.2.5",
     "joblib>=1.4.2",
