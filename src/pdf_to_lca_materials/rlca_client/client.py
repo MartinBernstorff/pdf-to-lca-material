@@ -207,7 +207,7 @@ if __name__ == "__main__":
         tags=[],
     )
 
-    token = get_token("martinbernstorff@gmail.com", "DA-falk7vau")
+    token = get_token()
     response = create_material(token, test_material)
     response_json = response.json()
     pass
